@@ -1,7 +1,13 @@
-spring:
-  datasource:
-    url: jdbc:tc:postgresql:9.6.8:///databasename
-    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
-  jpa:
-    hibernate:
-      ddl-auto: create-drop
+app:
+  bot:
+    token: ""
+  developer:
+    id: 0
+
+#spring:
+#  datasource:
+#    url: jdbc:tc:postgresql:9.6.8:///databasename
+#    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop

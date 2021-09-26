@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "app.bot.token",
+      "type": "java.lang.String",
+      "description": "The token needed to connect to the Telegram Bot."
+    },
+    {
+      "name": "app.developer.id",
+      "type": "java.lang.Long",
+      "description": "The developer's Telegram id."
+    }
+  ]
+}

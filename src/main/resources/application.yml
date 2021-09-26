@@ -1,1 +1,22 @@
+app:
+  bot:
+    token: ${DATEFY_TOKEN}
+  developer:
+    id: ${DATEFY_DEVELOPER_ID}
 
+#spring:
+#  datasource:
+#    url: ${DATEFY_DB_URL}
+#    username: ${DATEFY_DB_USER}
+#    password: ${DATEFY_DB_PASSWORD}
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate
+
+logging:
+  level:
+    dev:
+      seniorjava:
+        datefy: TRACE
+    org:
+      springframework: INFO
