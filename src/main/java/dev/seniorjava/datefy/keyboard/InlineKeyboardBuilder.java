@@ -1,4 +1,4 @@
-package dev.seniorjava.datefy.keyboards;
+package dev.seniorjava.datefy.keyboard;
 
 import com.pengrad.telegrambot.model.request.InlineKeyboardButton;
 import com.pengrad.telegrambot.model.request.InlineKeyboardMarkup;

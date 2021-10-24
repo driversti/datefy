@@ -12,23 +12,31 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-class CaughtExceptionListener {
+class ErrorsListener {
 
   private final TelegramBot bot;
   private final Long developerId;
 
-  CaughtExceptionListener(final TelegramBot bot,
+  ErrorsListener(final TelegramBot bot,
       final @Value("${app.developer.id}") Long developerId) {
     this.bot = bot;
     this.developerId = developerId;
   }
 
   @EventListener(CaughtExceptionEvent.class)
-  public void handle(CaughtExceptionEvent event) {
+  public void handle(final CaughtExceptionEvent event) {
     notifyDeveloper(event);
-    if (event.userChatId() != null) {
-      notifyUser(event.userChatId());
-    }
+    // todo implement
+//    if (event.userChatId() != null) {
+//      notifyUser(event.userChatId());
+//    }
+  }
+
+  @EventListener(UpdateNotHandledEvent.class)
+  public void handle(final UpdateNotHandledEvent event) {
+    log.warn("Update was not handled!");
+    final String message = "An event was not handled. Check logs.";
+    bot.execute(new SendMessage(developerId, message).replyMarkup(new ReplyKeyboardRemove()));
   }
 
   private void notifyDeveloper(final CaughtExceptionEvent event) {
