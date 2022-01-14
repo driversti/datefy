@@ -20,7 +20,7 @@ public class InlineKeyboardBuilder {
   }
 
   public InlineKeyboardBuilder row() {
-    if (isRowNotEnded()) {
+    if (!isRowEnded()) {
       endRow();
       log.debug("The current row was not ended properly!");
     }
@@ -28,9 +28,13 @@ public class InlineKeyboardBuilder {
     return this;
   }
 
-  public InlineKeyboardBuilder button(String text, String callbackData) {
+  public InlineKeyboardBuilder button(final String text, final String callbackData) {
     row.add(new InlineKeyboardButton(text).callbackData(callbackData));
     return this;
+  }
+
+  public InlineKeyboardBuilder button(int value, final String callbackData) {
+    return button(String.valueOf(value), callbackData);
   }
 
   public InlineKeyboardBuilder endRow() {
@@ -39,12 +43,12 @@ public class InlineKeyboardBuilder {
     return this;
   }
 
-  private boolean isRowNotEnded() {
-    return this.row != null;
+  public boolean isRowEnded() {
+    return this.row == null;
   }
 
   public InlineKeyboardMarkup build() {
-    if (isRowNotEnded()) {
+    if (!isRowEnded()) {
       endRow();
     }
     InlineKeyboardButton[][] inlineKeyboard = keyboard.stream()
