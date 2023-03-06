@@ -27,7 +27,7 @@
 <!--    <testcontainers.version>1.16.0</testcontainers.version>-->
 
     <!--  PLUGINS  -->
-    <gmavenplus-plugin.version>1.13.0</gmavenplus-plugin.version>
+    <gmavenplus-plugin.version>2.1.0</gmavenplus-plugin.version>
     <maven-surefire-plugin.version>3.0.0-M9</maven-surefire-plugin.version>
     <maven-failsafe-plugin.version>3.0.0-M5</maven-failsafe-plugin.version>
   </properties>
