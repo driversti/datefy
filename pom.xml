@@ -24,6 +24,7 @@
 
     <!--  TEST  -->
     <spock.version>2.4-M1-groovy-4.0</spock.version>
+    <groovy.version>4.0.9</groovy.version>
 <!--    <testcontainers.version>1.16.0</testcontainers.version>-->
 
     <!--  PLUGINS  -->
@@ -94,7 +95,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.codehaus.groovy</groupId>
+      <groupId>org.apache.groovy</groupId>
       <artifactId>groovy</artifactId>
       <version>${groovy.version}</version>
       <scope>test</scope>
