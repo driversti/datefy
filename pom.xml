@@ -25,7 +25,7 @@
 
     <!--  TEST  -->
     <spock.version>2.4-M1-groovy-4.0</spock.version>
-    <groovy.version>4.0.11</groovy.version>
+    <groovy.version>4.0.12</groovy.version>
 <!--    <testcontainers.version>1.16.0</testcontainers.version>-->
 
     <!--  PLUGINS  -->
