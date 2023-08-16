@@ -22,6 +22,7 @@
     <maven.build.timestamp.format>yyyyMMdd'T'HHmmss'Z'</maven.build.timestamp.format>
     <java-telegram-bot-api.version>6.7.0</java-telegram-bot-api.version>
     <snakeyaml.version>2.1</snakeyaml.version>
+    <commons-lang3.version>3.13.0</commons-lang3.version>
 
     <!--  TEST  -->
     <spock.version>2.4-M1-groovy-4.0</spock.version>
@@ -91,6 +92,7 @@
     <dependency>
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-lang3</artifactId>
+      <version>${commons-lang3.version}</version>
     </dependency>
 
     <!--  TEST DEPENDENCIES  -->
